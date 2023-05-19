@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+
+
+*{
+    margin: 0;
+    padding:0 ;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+    padding: 0 10ppx;
+    
+}
+.topnav{
+    height: 5vh;
+    width: 100%;
+    background-color: #050505;
+    color: azure;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: 0.8s;
+}
+a:hover{
+    color:rgb(69, 228, 122);
+}
+
+.topnav input[type=text] {
+    padding: 6px;
+    border: none;
+    border-radius: 15px;
+    width: 300px;
+    font-size: 13px;
+  }
+
+.topnav input[type=submit]{
+  background-color: #000000;
+  border: none;
+  color: white;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+

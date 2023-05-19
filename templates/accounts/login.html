@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Login</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'css/login.css'%}">
+    </head>
+    <body>
+        <form method="POST" novalidate>
+            {% csrf_token %}
+            <div class="wrapper">
+                <div class= "title">
+                    Login
+                </div>
+                <div class = "input_field">
+                  
+                  <label for="{{ form.username.id_for_label }}">Username:</label>
+                  <input type="text" class ="input" {{form.username}}>
+
+                </div>
+                <div class = "input_field">
+                  
+                  <label for="{{ form.password.id_for_label }}">Password:</label>
+                  <input type="password" class ="input" {{form.password}}>
+                </div>
+                <input type = "submit" value="Login" class= "btn">
+            </div>
+            
+        </form>
+        
+        
+    </body>
+</html>

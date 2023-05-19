@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding:0 ;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+}
+
+body{
+    background-color: rgb(231, 255, 238);
+    padding: 0 10ppx;
+    
+}
+.navbar{
+    height: 7vh;
+    width: 100%;
+    background-color: #050505;
+    color: azure;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.title{
+    font-size: 20px;
+    font-weight: 700;
+    color: #050505;
+    text-align: center;
+    margin-right: 50%;
+    margin-top: 17%;
+}
+a{
+    text-decoration: none;
+    color: azure;
+    transition: 0.8s;
+}
+h2{
+    cursor: pointer;
+    transition: 0.8s;
+    color: #5ec76c;
+}
+a:hover{
+    color:#5ec76c;
+}
+button{
+    margin-top: 20px;
+    padding: 8px 10px;
+    font-size: 18px;
+    border: 0;
+    border-radius: 12px;
+    background-color: #5ec76c;
+    outline: none;
+}
+
+.btn1{
+    margin-left: 18%;
+    margin-top: 15px;
+}
+
+.btn2{
+    margin-left: 25%;
+    margin-top: -60px;
+}
+
+img{
+    max-width: 150%;
+    margin-left: 50%;
+    margin-top: -250px;
+}
+
+.navbar input[type=text] {
+    padding: 6px;
+    border: none;
+    border-radius: 15px;
+    width: 300px;
+    font-size: 13px;
+  }
+
+.navbar input[type=submit]{
+  background-color: #000000;
+  border: none;
+  color: white;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+

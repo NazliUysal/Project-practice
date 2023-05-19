@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding:0 ;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+}
+
+body{
+    background-image: linear-gradient(rgba(29, 37, 27, 0.45), rgba(29, 37, 27, 0.45)), url(/static/images/regbackground.jpg);
+    padding: 0 10ppx;
+}
+
+
+.wrapper{
+    max-width: 500px;
+    width: 100%;
+    background: #070c07;
+    margin: 20px auto;
+    margin-top: 120px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 30px rgba(164, 252, 153, 0.466);
+}
+
+.wrapper .title{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #f2fff2;
+    text-align: center;
+}
+
+.wrapper .form{
+    width: 100%;
+}
+
+.wrapper .input_field{
+    margin-bottom: 15px;
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.wrapper .input_field label{
+    width: 200px;
+    margin: auto;
+    font-size: 18px;
+    color: #f2fff2;
+}
+.wrapper .input_field .input{
+    width: 200px;
+    outline: none;
+    border: 1px solid #f1fcf8;
+    font-size: 15px;
+    padding: 8px 10px;
+    border-radius: 3px;
+    
+}
+.wrapper .btn{
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 8px 10px;
+    font-size: 18px;
+    font-weight: 700;
+    border: 0;
+    border-radius: 12px;
+    color: #000000;
+    background-color: #c7fcba;
+    outline: none;
+    align-items: center;
+}

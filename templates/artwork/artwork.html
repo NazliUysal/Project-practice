@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        {% load static %}
+        <link rel = "stylesheet" href="{% static 'artwork.css'%}">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Artwork</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <nav class="navbar">
+            <h2>ArtNetwork</h2>
+            <a href="#">Artworks</a>
+            <a href="#">Search</a>
+            <a href="#">Explore</a>
+            <a href="#">Notifications</a>
+            <a href="#">New Post</a>
+            <a href="#">Profile</a>
+            <a href="#">Messages</a>
+           </nav>
+
+        <div class= "wrapper">
+
+           <div class="card">
+            <div class="cardimage">
+              <figure class="artimage">
+                <img src="static/placeholder.jpg" alt="Placeholder image" style="width:120%">
+              </figure>
+            </div>
+            <div class="cardcontent">
+              <div class="media">
+                
+                  <figure class="avatarimage">
+                    <img src="static/avatarplaceholder.png" alt="Placeholder image" style="width:15%">
+                  </figure>
+                
+                <div class="media-content">
+                  <p class="title is-4">Username</p>
+                  <p class="subtitle is-6">@username</p>
+                </div>
+              </div>
+          
+              <div class="captioncontent">
+                This is where the caption goes.
+              </div>
+            </div>
+          </div>
+
+        </div>
+    </body>
+</html>
