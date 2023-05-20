@@ -22,6 +22,10 @@ def upload(request):
     return render (request, "artwork/upload.html")
 
 
+"""
+This is the view for the post detail, here we pass the post_id as a parameter so we will be able to find the specifiy post when we click on it on
+the timeline page, we use the function get_object_or_404 to get he post and then we pass it to the template.
+"""
 @login_required
 def postDetail(request, post_id):
     post = get_object_or_404(Post, id=post_id)
