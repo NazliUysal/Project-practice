@@ -128,3 +128,14 @@ MEDIA_ROOT = BASE_DIR / 'media/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+#Added the LOGIN_REDIRECT_URL AND LOG OUT REDIRECT url, this is telling Django where do you want the user to go after they LOG OUT and LOG IN
+
+
+#in this case we are taking the user back to the home page.
+LOGOUT_REDIRECT_URL = 'home'
+
+#After sucessfull log in we are taking the user to the timeline page
+LOGIN_REDIRECT_URL = 'timeline'
+

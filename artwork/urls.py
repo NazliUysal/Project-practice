@@ -1,8 +1,9 @@
-from django.urls import path, include
-from . import views
+from django.urls import path
+from artwork.views import home, timeline, upload, postDetail
 
 urlpatterns = [
-    path('timeline/', views.timeline, name="timeline"),
-    path('upload', views.upload, name="upload")
-    
+    path('home/', home, name="home"),
+    path('timeline/', timeline, name="timeline"),
+    path('upload/', upload, name="upload"),
+    path('<uuid:post_id>/', postDetail, name='post-detail'),
 ]

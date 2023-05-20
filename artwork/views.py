@@ -1,20 +1,31 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from .models import Post
 from django.template import loader
 
-# Create your views here.
-def timeline(request):
 
+# Create your views here.
+
+def home(request):
+    return render (request, "index.html")
+
+@login_required(login_url="home")
+def timeline(request):
     posts = Post.objects.all()
     user = request.user
-    return render (request, "accounts/timeline.html", {'user':user, 'posts':posts})
+    return render (request, "artwork/timeline.html", {'user':user, 'posts':posts})
 
 @login_required
 def upload(request):
     return render (request, "artwork/upload.html")
+
+
+@login_required
+def postDetail(request, post_id):
+    post = get_object_or_404(Post, id=post_id)
+    return render (request, "artwork/artwork.html", {'post':post})
 
 
 # @login_required

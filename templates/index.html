@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% load static %}
+   
+   <link rel = "stylesheet" href="{% static 'css/landing.css'%}">
+   <title>ArtNetwork</title>
+   <link rel="shortcut icon" type="image/png" href="static/images/letterA.png">
+  </head>
+
+   <body>
+     <nav class="navbar">
+        <h2>ArtNetwork</h2>
+        <a href="#">Artworks</a>
+        <div class="search-container">
+                    
+          <input type="text" placeholder="Search..." name="search">
+          <input type = "submit" value="Search" class= "btn">
+        
+    </div>
+        <a href="{% url 'register' %}">Join</a>
+        <a href="{% url 'login' %}">Login</a>
+       </nav>
+    <div class= "title">
+      <h1>Welcome to the ArtNetwork</h1>
+      <p>Join to discover and share art</p>
+    </div>
+
+    <div class= "btn1">
+     <a class="button" href="{% url 'register' %}"> Register </a>
+    </div>
+    <div class= "btn2">
+      <a class="button" href="{% url 'login' %}"> Login </a>
+    </div>
+     <img src="{% static 'images/artist.png' %}">
+   </body>
+</html>
+

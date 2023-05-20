@@ -8,9 +8,6 @@ from .forms import registerForm
 from .forms import loginForm
 
 
-def home (request):
-    return render (request, "accounts/index.html")
-
 def register (request):
     form = registerForm()
 
@@ -44,7 +41,7 @@ def loginPage (request):
     
 
 
-def logoutPage (request):
+def logoutPage(request):
     logout(request)
     messages.success(request, f'You have been logged out.')
     return redirect('home')
