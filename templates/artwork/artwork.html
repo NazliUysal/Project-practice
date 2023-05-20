@@ -28,7 +28,7 @@
            <div class="card">
             <div class="cardimage">
               <figure class="artimage">
-                <img src="static/placeholder.jpg" alt="Placeholder image" style="width:120%">
+                <img src="{{ post.image.url }}" alt="Placeholder image" style="width:120%">
               </figure>
             </div>
             <div class="cardcontent">
@@ -39,13 +39,13 @@
                   </figure>
                 
                 <div class="media-content">
-                  <p class="title is-4">Username</p>
-                  <p class="subtitle is-6">@username</p>
+                  <p class="title is-4">{{ post.user.first_name }} {{ post.user.last_name }}</p>
+                  <p class="subtitle is-6">@{{ post.user.username }}</p>
                 </div>
               </div>
           
               <div class="captioncontent">
-                This is where the caption goes.
+                {{ post.caption }}
               </div>
             </div>
           </div>

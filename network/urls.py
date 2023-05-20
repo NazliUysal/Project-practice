@@ -19,11 +19,40 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
+
+from artwork.views import timeline
+
+"""
+When you are importing a group of urls from an app in this case:
+    path('', include('django.contrib.auth.urls')),
+    path('', include('accounts.urls')),
+    path('', include('artwork.urls')),
+
+    You neeed to set a main url that group them together. I'm going to change them to what would be the best
+    option in this case
+
+"""
+
+"""
+
+YOUR PREVIOUS CODE
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('django.contrib.auth.urls')),
     path('', include('accounts.urls')),
     path('', include('artwork.urls')),
 ]
+"""
+
+#Recommendation
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('accounts/', include('accounts.urls')),
+    path('artwork/', include('artwork.urls')),
+    path('', timeline, name='timeline'),
+]
+
+#I deleted the auth.urls because we are going to call those urls inside account, there's no need to call it here
+#Divide and conquer!. It's important to keep things separate so it's easier for you to debugg and find errors, etc..
 
 urlpatterns = urlpatterns+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
